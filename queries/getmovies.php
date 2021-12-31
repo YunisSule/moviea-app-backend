@@ -28,6 +28,6 @@ try {
     echo json_encode($rows);
 
 
-} catch (\Throwable $th) {
-    //throw $th;
+} catch(PDOException $e){
+    echo $e->getMessage();
 }
